@@ -180,9 +180,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  mask-image: linear-gradient(rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0));
 }
 
-.hero::after {
+/* .hero::after {
   content: "";
   display: block;
   position: absolute;
@@ -193,12 +194,25 @@ body {
     0deg,
     rgba(1, 1, 3, 1) 8%,
     rgba(255, 255, 255, 0) 50%
-  );
+    );
+    } */
+
+.hero .mask-container {
+  position: absolute;
+  inset: 0;
+  mask-image: url("../img/header-edit.png");
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: cover;
 }
 
 .hero .content {
   padding: 1.4rem 7%;
-  max-width: 60rem;
+  /* max-width: 60rem; */
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  top: 8rem;
 }
 
 .hero .content h1 {
@@ -265,6 +279,10 @@ body {
 
 .about .row .about-img img {
   width: 100%;
+  mask-image: url("../img/menu/coffee.svg");
+  mask-size: 80%;
+  mask-repeat: no-repeat;
+  mask-position: center;
 }
 
 .about .row .content {
@@ -281,7 +299,7 @@ body {
   font-size: 1.4rem;
   margin-bottom: 0.8rem;
   font-weight: 100;
-  line-height: 1.5;
+  line-height: 2;
 }
 
 /* Menu Section */
